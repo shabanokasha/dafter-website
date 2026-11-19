@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دفتر الشُكُك — ودّع الدفتر الورق</title>
+<meta name="description" content="دفتر الشُكُك: تطبيق لأصحاب المحلات يسجّل ديون الزباين والسداد، يعرّفك مين متأخر، ويبعت كشف الحساب PDF على الواتساب.">
+<meta name="theme-color" content="#14213D">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:title" content="دفتر الشُكُك — ودّع الدفتر الورق">
+<meta property="og:description" content="دفتر الشُكُك: تطبيق لأصحاب المحلات يسجّل ديون الزباين والسداد، يعرّفك مين متأخر، ويبعت كشف الحساب PDF على الواتساب.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F6F7F9}
+a{color:#1D4FA0}a:hover{color:#14213D}
+*{box-sizing:border-box}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.reveal{animation:fadeUp 700ms cubic-bezier(.2,.8,.2,1) both}
+@supports (animation-timeline: view()){
+  .reveal{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:14px;font-weight:700;font-size:17px;text-decoration:none;transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:#B4441A;color:#FFFFFF;box-shadow:0 10px 24px rgba(180,68,26,.28)}
+.btn-primary:hover{color:#FFFFFF}
+.btn-ghost{background:rgba(255,255,255,.08);color:#FFFFFF;border:1px solid rgba(255,255,255,.25)}
+.btn-ghost:hover{color:#FFFFFF;background:rgba(255,255,255,.14)}
+.btn-wa{background:#166534;color:#FFFFFF}
+.btn-wa:hover{color:#FFFFFF}
+.nav a{color:#C7D2FE;text-decoration:none;font-size:15px;font-weight:500}
+.nav a:hover{color:#FFFFFF}
+.card{background:#FFFFFF;border-radius:20px;padding:26px;border:1px solid #E5E7EB}
+.icon{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center}
+details{background:#FFFFFF;border:1px solid #E5E7EB;border-radius:16px;padding:0 22px}
+details[open]{box-shadow:0 8px 24px rgba(20,33,61,.06)}
+summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:700;font-size:17px;display:flex;justify-content:space-between;align-items:center;gap:12px;color:#111827}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;color:#B4441A;line-height:1}
+details[open] summary::after{content:"−"}
+.phone{border-radius:42px;padding:12px;background:#0B1020;box-shadow:0 40px 80px rgba(0,0,0,.35),0 0 0 2px #2A3350}
+.phone img{display:block;width:100%;height:auto;border-radius:32px}
+.mobile-bar{display:none}
+@media (max-width: 860px){
+  .nav{display:none !important}
+  .hero-grid,.show-row{grid-template-columns:minmax(0,1fr) !important}
+  .hero-text{text-align:center;align-items:center !important}
+  .hero h1{font-size:44px !important}
+  .show-row .show-img{order:2}
+  .grid3{grid-template-columns:minmax(0,1fr) !important}
+  .grid2{grid-template-columns:minmax(0,1fr) !important}
+  .sec-title{font-size:32px !important}
+  .mobile-bar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:20;gap:8px}
+  .head-cta{display:none !important}
+  footer{padding-bottom:96px !important}
+}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+<div id="top" dir="rtl" style="font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; color: #111827; background: #F6F7F9; line-height: 1.7">
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero" style="position: relative; z-index: 1; background: linear-gradient(160deg, #1B2B52 0%, #14213D 55%, #0E1830 100%); color: #FFFFFF">
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent 0 47px, rgba(255,255,255,0.045) 47px 48px)"></div>
+    <div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; right: 7%; width: 2px; background: rgba(224,112,62,0.35)"></div>
+
+    <header style="position: relative; max-width: 1200px; margin: 0 auto; padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="#top" style="display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none">
+        <svg width="44" height="44" viewBox="0 0 120 120" role="img" aria-label="لوجو دفتر الشُكُك"><rect width="120" height="120" rx="28" fill="#fff"/><g transform="translate(-4,-2)"><rect x="30" y="24" width="52" height="72" rx="6" fill="#14213D"/><rect x="30" y="24" width="10" height="72" rx="3" fill="#0B1428"/><rect x="48" y="40" width="26" height="14" rx="3" fill="#fff"/><line x1="52" y1="47" x2="70" y2="47" stroke="#14213D" stroke-width="2.5" stroke-linecap="round"/><g transform="rotate(35 82 62)"><rect x="76" y="34" width="12" height="50" rx="2" fill="#E0703E"/><path d="M76 84 L82 96 L88 84Z" fill="#F4D6C6"/><path d="M80.5 93 L82 96 L83.5 93Z" fill="#111827"/><rect x="76" y="34" width="12" height="7" rx="2" fill="#9CA3AF"/></g></g></svg>
+        <span style="font-family: Cairo, sans-serif; font-weight: 800; font-size: 22px">دفتر الشُكُك</span>
+      </a>
+      <nav class="nav" aria-label="أقسام الصفحة" style="display: flex; gap: 28px">
+        <a href="#features">المميزات</a>
+        <a href="#how">إزاي بيشتغل</a>
+        <a href="#pricing">الاشتراك</a>
+        <a href="#faq">أسئلة شائعة</a>
+      </nav>
+      <a class="btn btn-ghost head-cta" href="https://wa.me/201026123485" style="min-height: 44px; padding: 0 18px; font-size: 15px">كلّمنا</a>
+    </header>
+
+    <div class="hero-grid" style="position: relative; max-width: 1200px; margin: 0 auto; padding: 40px 24px 0; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 48px; align-items: end">
+      <div class="hero-text" style="display: flex; flex-direction: column; align-items: flex-start; gap: 22px; padding-bottom: 96px; animation: fadeUp 700ms cubic-bezier(.2,.8,.2,1) both">
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(244,162,124,0.14); color: #F4A27C; font-size: 14px; font-weight: 600">لأصحاب المحلات اللي بتبيع بالشُكُك</span>
+        <h1 style="margin: 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: 56px; line-height: 1.25">ودّع الدفتر الورق.<br>حساب كل زبون في جيبك.</h1>
+        <p style="margin: 0; font-size: 20px; color: #C7D2FE; max-width: 540px">سجّل ديون زباينك والسداد من موبايلك، اعرف مين متأخر وبقاله كام يوم، وابعت كشف الحساب PDF على الواتساب في ثانية.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center">
+          <a class="btn btn-primary" href="#pricing">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 9-14 9z"/></svg>
+            قريباً على Google Play
+          </a>
+          <a class="btn btn-ghost" href="https://wa.me/201026123485">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>
+            اسألنا على واتساب
+          </a>
+        </div>
+        <span style="font-size: 14px; color: #9FB0D8">اشتراك شهري بسيط · لأندرويد · بالعربي</span>
+      </div>
+
+      <div style="position: relative; display: flex; justify-content: center">
+        <div class="phone" style="width: 300px; margin-bottom: -120px; animation: floatY 6s ease-in-out 1s infinite">
+          <img src="assets/home.jpg" width="600" height="1272" alt="الشاشة الرئيسية: إجمالي الفلوس اللي برّه وقايمة الزباين">
+        </div>
+        <div style="position: absolute; top: 120px; right: -6px; background: #FFFFFF; color: #111827; border-radius: 16px; padding: 12px 16px; box-shadow: 0 16px 40px rgba(0,0,0,0.25); display: flex; align-items: center; gap: 10px; animation: fadeUp 700ms ease 500ms both">
+          <span style="width: 36px; height: 36px; border-radius: 12px; background: #FDF0EA; color: #B4441A; display: flex; align-items: center; justify-content: center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">كريم سامي</b><span style="font-size: 12px; color: #B4441A">متأخر 3 أيام</span></span>
+        </div>
+        <div style="position: absolute; bottom: 40px; left: -10px; background: #FFFFFF; color: #111827; border-radius: 16px; padding: 12px 16px; box-shadow: 0 16px 40px rgba(0,0,0,0.25); display: flex; align-items: center; gap: 10px; animation: fadeUp 700ms ease 800ms both">
+          <span style="width: 36px; height: 36px; border-radius: 12px; background: #E9F6EE; color: #166534; display: flex; align-items: center; justify-content: center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.3"><b style="font-size: 14px">اتبعت كشف الحساب</b><span style="font-size: 12px; color: #4B5563">على الواتساب</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PROBLEM ======================= -->
+  <section style="max-width: 1100px; margin: 0 auto; padding: 170px 24px 80px; text-align: center">
+    <h2 class="sec-title reveal" style="margin: 0 0 12px; font-family: Cairo, sans-serif; font-weight: 800; font-size: 40px; color: #14213D">الدفتر الورق بيتعبك؟</h2>
+    <p class="reveal" style="margin: 0 auto 40px; font-size: 18px; color: #4B5563; max-width: 640px">كل صاحب محل عارف الحكاية دي كويس.</p>
+    <div class="grid3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; text-align: right">
+      <div class="card reveal">
+        <div class="icon" style="background: #FDF0EA; color: #B4441A; margin-bottom: 16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M9 13l6 6M15 13l-6 6"/></svg></div>
+        <h3 style="margin: 0 0 6px; font-size: 19px">الدفتر بيضيع أو بيتقطع</h3>
+        <p style="margin: 0; color: #4B5563">ومعاه بتضيع حسابات شهور، ومحدش هيفتكر كان عليه كام.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon" style="background: #FDF0EA; color: #B4441A; margin-bottom: 16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.7M12 17h.01"/></svg></div>
+        <h3 style="margin: 0 0 6px; font-size: 19px">مش فاكر مين عليه كام</h3>
+        <p style="margin: 0; color: #4B5563">وتقعد تقلّب في الصفحات وتجمع بالآلة الحاسبة علشان تعرف الرصيد.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon" style="background: #FDF0EA; color: #B4441A; margin-bottom: 16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/><path d="M12 8v4M12 15h.01"/></svg></div>
+        <h3 style="margin: 0 0 6px; font-size: 19px">"أنا دفعت لك قبل كده"</h3>
+        <p style="margin: 0; color: #4B5563">ومعندكش ورقة واضحة تبعتها للزبون فيها كل حركة بتاريخها.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FEATURES ======================= -->
+  <section id="features" style="background: #FFFFFF; border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 80px 24px">
+      <div style="text-align: center; margin-bottom: 44px">
+        <span class="reveal" style="color: #B4441A; font-weight: 700">دفتر الشُكُك بيحل ده</span>
+        <h2 class="sec-title reveal" style="margin: 6px 0 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: 40px; color: #14213D">كل اللي محتاجه في تطبيق واحد</h2>
+      </div>
+      <div class="grid3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px">
+        <div class="card reveal" style="background: #F6F7F9; border-color: transparent">
+          <div class="icon" style="background: #E8ECF5; color: #14213D; margin-bottom: 16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6.5 6.5 0 0 1 3.5 6"/></svg></div>
+          <h3 style="margin: 0 0 6px; font-size: 19px">كل زباينك في مكان واحد</h3>
+          <p style="margin: 0; color: #4B5563">مين عليه كام وآخر مرة دفع إمتى، وتضيف الزبون من الأسماء اللي على موبايلك.</p>
+        </div>
+        <div class="card reveal" style="background: #F6F7F9; border-color: transparent">
+          <div class="icon" style="background: #FDF0EA; color: #B4441A; margin-bottom: 16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></div>
+          <h3 style="margin: 0 0 6px; font-size: 19px">دين أو سداد في ثانية</h3>
+          <p style="margin: 0; color: #4B5563">تكتب المبلغ وتدوس تسجيل. وتقدر تنقل حسابات الدفتر القديم بتاريخها الأصلي.</p>
+        </div>
+        <div class="card reveal" style="background: #F6F7F9; border-color: transparent">
+          <div class="icon" style="background: #FDF0EA; color: #B4441A; margin-bottom: 16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3 style="margin: 0 0 6px; font-size: 19px">تعرف مين متأخر</h3>
+          <p style="margin: 0; color: #4B5563">تحدد ميعاد السداد، والتطبيق يقولك مين عدّى ميعاده وبقاله كام يوم.</p>
+        </div>
+        <div class="card reveal" style="background: #F6F7F9; border-color: transparent">
+          <div class="icon" style="background: #E9F6EE; color: #166534; margin-bottom: 16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14h6M9 17h4"/></svg></div>
+          <h3 style="margin: 0 0 6px; font-size: 19px">كشف حساب PDF على الواتساب</h3>
+          <p style="margin: 0; color: #4B5563">باسم الزبون ولوجو محلك، بكل حركة بتاريخها، ويتبعت على شات الزبون على طول.</p>
+        </div>
+        <div class="card reveal" style="background: #F6F7F9; border-color: transparent">
+          <div class="icon" style="background: #EAF1FC; color: #1D4FA0; margin-bottom: 16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3 style="margin: 0 0 6px; font-size: 19px">إحصائيات كل أسبوع</h3>
+          <p style="margin: 0; color: #4B5563">دخل كام دين جديد واتحصّل كام، وتذكّر كل المتأخرين بضغطة واحدة.</p>
+        </div>
+        <div class="card reveal" style="background: #F6F7F9; border-color: transparent">
+          <div class="icon" style="background: #E8ECF5; color: #14213D; margin-bottom: 16px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3 style="margin: 0 0 6px; font-size: 19px">موظفينك وأمانك</h3>
+          <p style="margin: 0; color: #4B5563">ضيف موظفينك يسجّلوا معاك على نفس الدفتر، واقفل التطبيق برقم سري أو بصمة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SHOWCASE ======================= -->
+  <section style="max-width: 1100px; margin: 0 auto; padding: 90px 24px 40px; display: flex; flex-direction: column; gap: 90px">
+    <div class="show-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center">
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 14px">
+        <span style="color: #B4441A; font-weight: 700">صفحة كل زبون</span>
+        <h2 class="sec-title" style="margin: 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: 36px; color: #14213D; line-height: 1.35">رصيده وحركاته قدامك، من غير آلة حاسبة</h2>
+        <p style="margin: 0; font-size: 18px; color: #4B5563">كل دين وكل سداد بتاريخه، والرصيد بيتحسب لوحده بعد كل حركة. ولو اتأخر، هتشوف كام يوم على طول.</p>
+      </div>
+      <div class="show-img reveal" style="display: flex; justify-content: center">
+        <div class="phone" style="width: 280px"><img loading="lazy" src="assets/customer.jpg" width="600" height="1272" alt="صفحة زبون: عليه 700 جنيه ومتأخر 3 أيام، وتحتها الحركات"></div>
+      </div>
+    </div>
+
+    <div class="show-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center">
+      <div class="show-img reveal" style="display: flex; justify-content: center">
+        <img loading="lazy" src="assets/pdf.jpg" width="900" height="684" alt="كشف حساب PDF فيه لوجو المحل واسم الزبون والإجماليات وجدول الحركات" style="width: 100%; height: auto; max-width: 520px; border-radius: 18px; box-shadow: 0 30px 60px rgba(20,33,61,0.18); transform: rotate(-2deg)">
+      </div>
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 14px">
+        <span style="color: #166534; font-weight: 700">كشف الحساب</span>
+        <h2 class="sec-title" style="margin: 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: 36px; color: #14213D; line-height: 1.35">ورقة واضحة تقفل أي نقاش</h2>
+        <p style="margin: 0; font-size: 18px; color: #4B5563">كشف PDF باسم محلك ولوجوه: إجمالي المسحوبات والمدفوع والمتبقي، وكل حركة بتاريخها. تبعته على واتساب الزبون أو تحفظه عندك.</p>
+      </div>
+    </div>
+
+    <div class="show-row" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center">
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 14px">
+        <span style="color: #1D4FA0; font-weight: 700">الإحصائيات</span>
+        <h2 class="sec-title" style="margin: 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: 36px; color: #14213D; line-height: 1.35">اعرف شغلك ماشي إزاي</h2>
+        <p style="margin: 0; font-size: 18px; color: #4B5563">ديون جديدة وتحصيل كل أسبوع، وقايمة بالمتأخرين وزرار تذكّرهم كلهم على الواتساب.</p>
+      </div>
+      <div class="show-img reveal" style="display: flex; justify-content: center">
+        <div class="phone" style="width: 280px"><img loading="lazy" src="assets/stats.jpg" width="600" height="1272" alt="شاشة الإحصائيات: ديون جديدة وتحصيل الشهر ورسم بياني لكل أسبوع"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= HOW ======================= -->
+  <section id="how" style="max-width: 1100px; margin: 0 auto; padding: 60px 24px 90px; text-align: center">
+    <h2 class="sec-title reveal" style="margin: 0 0 40px; font-family: Cairo, sans-serif; font-weight: 800; font-size: 40px; color: #14213D">تبدأ في 3 خطوات</h2>
+    <div class="grid3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px">
+      <div class="card reveal" style="text-align: center">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #14213D; color: #FFFFFF; font-family: Cairo, sans-serif; font-weight: 800; font-size: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px">1</div>
+        <h3 style="margin: 0 0 6px; font-size: 19px">حمّل التطبيق</h3>
+        <p style="margin: 0; color: #4B5563">على موبايلك الأندرويد.</p>
+      </div>
+      <div class="card reveal" style="text-align: center">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #14213D; color: #FFFFFF; font-family: Cairo, sans-serif; font-weight: 800; font-size: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px">2</div>
+        <h3 style="margin: 0 0 6px; font-size: 19px">سجّل محلك</h3>
+        <p style="margin: 0; color: #4B5563">اسم المحل واسمك ورقم موبايلك، وخلاص.</p>
+      </div>
+      <div class="card reveal" style="text-align: center">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #B4441A; color: #FFFFFF; font-family: Cairo, sans-serif; font-weight: 800; font-size: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px">3</div>
+        <h3 style="margin: 0 0 6px; font-size: 19px">ابدأ سجّل</h3>
+        <p style="margin: 0; color: #4B5563">ضيف زباينك وانقل اللي في الدفتر الورق بتاريخه.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SECURITY ======================= -->
+  <section style="background: #14213D; color: #FFFFFF">
+    <div class="grid3" style="max-width: 1100px; margin: 0 auto; padding: 70px 24px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px">
+      <div class="reveal" style="display: flex; gap: 14px; align-items: flex-start">
+        <div class="icon" style="background: rgba(255,255,255,0.08); color: #F4A27C; flex-shrink: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.5-9 6 6 0 0 1 11.6 1.5A4 4 0 0 1 17 18z"/></svg></div>
+        <div><h3 style="margin: 0 0 4px; font-size: 18px">محفوظ على السيرفر</h3><p style="margin: 0; color: #C7D2FE">لو الموبايل ضاع أو اتغيّر، تدخل برقمك وتلاقي كل حساباتك.</p></div>
+      </div>
+      <div class="reveal" style="display: flex; gap: 14px; align-items: flex-start">
+        <div class="icon" style="background: rgba(255,255,255,0.08); color: #F4A27C; flex-shrink: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div>
+        <div><h3 style="margin: 0 0 4px; font-size: 18px">بيانات محلك ليك لوحدك</h3><p style="margin: 0; color: #C7D2FE">كل محل حساباته منفصلة، ومحدش يشوفها غيرك وغير الموظفين اللي إنت تضيفهم.</p></div>
+      </div>
+      <div class="reveal" style="display: flex; gap: 14px; align-items: flex-start">
+        <div class="icon" style="background: rgba(255,255,255,0.08); color: #F4A27C; flex-shrink: 0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 11c0 3-1 6-3 8M8 6.5A6 6 0 0 1 18 11c0 2-.3 4-1 6M5 9.5a8 8 0 0 0-.5 2.5M14 12c0 2.5-.5 5-1.5 7"/></svg></div>
+        <div><h3 style="margin: 0 0 4px; font-size: 18px">قفل برقم سري أو بصمة</h3><p style="margin: 0; color: #C7D2FE">التطبيق بيتقفل لوحده، فمحدش يفتح حساباتك من موبايلك.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PRICING ======================= -->
+  <section id="pricing" style="max-width: 1100px; margin: 0 auto; padding: 90px 24px; text-align: center">
+    <h2 class="sec-title reveal" style="margin: 0 0 10px; font-family: Cairo, sans-serif; font-weight: 800; font-size: 40px; color: #14213D">اشتراك واحد، كل المميزات</h2>
+    <p class="reveal" style="margin: 0 auto 36px; font-size: 18px; color: #4B5563">من غير عقود. تدفع كل شهر وتلغي في أي وقت.</p>
+    <div class="card reveal" style="max-width: 460px; margin: 0 auto; padding: 34px; border: 2px solid #14213D; text-align: right; box-shadow: 0 30px 60px rgba(20,33,61,0.10)">
+      <span style="display: inline-block; padding: 4px 12px; border-radius: 999px; background: #E8ECF5; color: #14213D; font-size: 14px; font-weight: 700">اشتراك شهري</span>
+      <div style="display: flex; align-items: baseline; gap: 8px; margin: 14px 0 4px">
+        <span style="font-family: Cairo, sans-serif; font-weight: 800; font-size: 52px; color: #14213D">150</span>
+        <span style="font-size: 18px; color: #4B5563">ج.م / شهر</span>
+      </div>
+      <p style="margin: 0 0 20px; color: #4B5563">للمحل كله، مع موظفينه.</p>
+      <ul style="list-style: none; margin: 0 0 26px; padding: 0; display: flex; flex-direction: column; gap: 12px">
+        <li style="display: flex; gap: 10px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>زباين وحركات من غير حد</li>
+        <li style="display: flex; gap: 10px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>كشوف حساب PDF وتذكير واتساب</li>
+        <li style="display: flex; gap: 10px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>إحصائيات وتنبيه بالمتأخرين</li>
+        <li style="display: flex; gap: 10px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>حسابات للموظفين</li>
+        <li style="display: flex; gap: 10px; align-items: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>بياناتك محفوظة على السيرفر</li>
+      </ul>
+      <a class="btn btn-wa" href="https://wa.me/201026123485" style="width: 100%">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>
+        اشترك من الواتساب
+      </a>
+    </div>
+  </section>
+
+  <!-- ======================= FAQ ======================= -->
+  <section id="faq" style="background: #FFFFFF; border-top: 1px solid #E5E7EB">
+    <div style="max-width: 820px; margin: 0 auto; padding: 80px 24px">
+      <h2 class="sec-title reveal" style="margin: 0 0 32px; font-family: Cairo, sans-serif; font-weight: 800; font-size: 40px; color: #14213D; text-align: center">أسئلة بتتسأل كتير</h2>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <details open>
+          <summary>محتاج نت علشان أستخدمه؟</summary>
+          <p style="margin: 0 0 20px; color: #4B5563">أيوه، التطبيق متصل بالسيرفر علشان حساباتك تفضل محفوظة ومتزامنة بينك وبين موظفينك. أي باقة نت عادية كفاية.</p>
+        </details>
+        <details>
+          <summary>لو الموبايل ضاع أو اتسرق؟</summary>
+          <p style="margin: 0 0 20px; color: #4B5563">حساباتك مش على الموبايل، على السيرفر. تدخل برقمك من أي موبايل تاني وتلاقي كل حاجة زي ما هي. ولو نسيت كلمة السر تقدر تغيّرها بكود.</p>
+        </details>
+        <details>
+          <summary>أقدر أنقل الحسابات اللي في الدفتر الورق؟</summary>
+          <p style="margin: 0 0 20px; color: #4B5563">أيوه. وانت بتسجّل الدين أو السداد تختار تاريخه القديم، فالكشف يطلع مظبوط من أول يوم.</p>
+        </details>
+        <details>
+          <summary>ينفع أكتر من حد يشتغل على نفس الدفتر؟</summary>
+          <p style="margin: 0 0 20px; color: #4B5563">أيوه. صاحب المحل يضيف موظفينه برقم موبايل كل واحد، ويقدر يوقف أي حساب في أي وقت.</p>
+        </details>
+        <details>
+          <summary>بيشتغل على الآيفون؟</summary>
+          <p style="margin: 0 0 20px; color: #4B5563">دلوقتي على أندرويد. لو محتاجه على آيفون كلّمنا على الواتساب.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FINAL CTA ======================= -->
+  <section style="position: relative; overflow: hidden; background: linear-gradient(160deg, #1B2B52, #0E1830); color: #FFFFFF; text-align: center">
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent 0 47px, rgba(255,255,255,0.045) 47px 48px)"></div>
+    <div style="position: relative; max-width: 800px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; align-items: center; gap: 18px">
+      <h2 class="sec-title reveal" style="margin: 0; font-family: Cairo, sans-serif; font-weight: 800; font-size: 44px">خلّي كل جنيه ليك متسجّل</h2>
+      <p class="reveal" style="margin: 0; font-size: 19px; color: #C7D2FE">دفتر الشُكُك جاي قريب على Google Play. ابعتلنا دلوقتي ونبلّغك أول ما ينزل.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center">
+        <a class="btn btn-primary" href="https://wa.me/201026123485">بلّغني لما ينزل</a>
+        <a class="btn btn-ghost" href="#features">شوف المميزات تاني</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #0B1428; color: #9FB0D8; padding: 26px 24px; text-align: center; font-size: 14px">
+    © 2026 دفتر الشُكُك · <a href="https://wa.me/201026123485" style="color: #C7D2FE">واتساب: 0102 612 3485</a>
+  </footer>
+
+  <div class="mobile-bar">
+    <a class="btn btn-primary" href="#pricing" style="flex: 1">قريباً على Google Play</a>
+    <a class="btn btn-wa" href="https://wa.me/201026123485" aria-label="كلّمنا على واتساب" style="padding: 0 16px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>
+    </a>
+  </div>
+</div>
+</body>
+</html>
